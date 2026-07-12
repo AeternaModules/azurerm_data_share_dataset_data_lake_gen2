@@ -1,3 +1,7 @@
+output "data_share_dataset_data_lake_gen2s_id" {
+  description = "Map of id values across all data_share_dataset_data_lake_gen2s, keyed the same as var.data_share_dataset_data_lake_gen2s"
+  value       = { for k, v in azurerm_data_share_dataset_data_lake_gen2.data_share_dataset_data_lake_gen2s : k => v.id }
+}
 output "data_share_dataset_data_lake_gen2s_display_name" {
   description = "Map of display_name values across all data_share_dataset_data_lake_gen2s, keyed the same as var.data_share_dataset_data_lake_gen2s"
   value       = { for k, v in azurerm_data_share_dataset_data_lake_gen2.data_share_dataset_data_lake_gen2s : k => v.display_name }
